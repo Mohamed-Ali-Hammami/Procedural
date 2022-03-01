@@ -1,0 +1,26 @@
+ALGORITHM dot_product
+VAR
+    x1,x2,y1,y2,ps:FLOAT;
+    i,n:integer;
+    function dot_product(x1,y1,x2,y2:FLOAT):FLOAT;
+begin
+	 dot_product:=(x1*y1)+(x2*y2);
+	end;
+BEGIN
+writeln('give the number of couples');
+	readln(n);
+	for i:=1 to n do 
+	begin
+		writeln('le couple ',i);
+		writeln('give y of v1');
+	readln(x1);
+			writeln('give x of v1');
+	readln(y1);
+			writeln('give x of v2');
+	readln(x2);
+			writeln('give y of v2');
+	readln(y2);
+	writeln(dot_product(x1,y1,x2,y2):4:2);
+    if  ((dot_product(x1,y1,x2,y2))=0 )then  writeln('vecteur orthonorme')
+        else writeln('non-orthonorm vector');
+END
